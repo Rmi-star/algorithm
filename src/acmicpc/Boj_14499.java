@@ -6,7 +6,7 @@ import java.util.StringTokenizer;
 
 public class Boj_14499 {
     static int N, M; // 지도 크기
-    static int[] dx = {0, 1, -1, 0, 0}; // 우좌상하
+    static int[] dx = {0, 1, -1, 0, 0}; // 우좌상하 → 동서북남
     static int[] dy = {0, 0, 0, -1, 1};
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

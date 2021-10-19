@@ -7,6 +7,13 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
+/*
+ 구슬 탈출2
+  - BFS 사용
+  - 사용한 자료 구조
+  - Marble class 사용
+  - 예외처리 부분 보기!
+ */
 public class Boj_13460 {
     static int N, M;
     static char[][] map;

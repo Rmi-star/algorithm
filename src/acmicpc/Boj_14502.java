@@ -100,7 +100,7 @@ public class Boj_14502 {
         // 모든 벽의 위치를 모아놓자.
         for(int i=1; i<=N; i++) {
             for(int j=1; j<=M; j++) {
-                if(A[i][j] == 0) { // 56빈 공간이라면
+                if(A[i][j] == 0) { // 빈 공간이라면
                     B++; // 벽의 개수 증가
                     blank[B][0] = i; // 벽의 위치 기록
                     blank[B][1] = j;

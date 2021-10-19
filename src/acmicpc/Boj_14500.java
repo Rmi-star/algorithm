@@ -2,16 +2,16 @@ package acmicpc;
 
 import java.util.Scanner;
 
+/*
+ 테트로미노
+ - BFS 보기!
+
+ */
 public class Boj_14500 {
     static int N, M, ans;
     static int[][] map;
     static int[] dy = {-1, 1, 0, 0};
     static int[] dx = {0, 0, -1, 1};
-
-    static int result = 0;
-    // ㅜ 일때 모든 경우 (ㅜ,ㅗ,ㅓ,ㅏ 순)
-    static int[][] ex = {{0, 0, 0, 1}, {1, 1, 1, 0}, {0, 1, 2, 1}, {0, 1, 2, 1}}; //세로
-    static int[][] ey = {{0, 1, 2, 1}, {0, 1, 2, 1}, {1, 1, 1, 0}, {0, 0, 0, 1}}; //가로
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -70,31 +70,4 @@ public class Boj_14500 {
         if (y > 0 && x < M - 2)
             ans = Math.max(ans, map[y][x] + map[y][x + 1] + map[y][x + 2] + map[y - 1][x + 1]);
     }
-
-    // ㅜ,ㅗ,ㅓ,ㅏ 모양 검사
-//    static void exceptionCase(int x, int y) {
-//        int nx, ny, sum;
-//        boolean outCheck = false;
-//
-//        for(int i=0; i<4; i++) {
-//            sum = 0;
-//            outCheck = false;
-//            for(int j=0; j<4; j++) {
-//                nx = x + ex[i][j]; // 세로
-//                ny = y + ey[i][j]; // 가로
-//
-//                // 종이 범위 넘어가는지 체크
-//                if(nx<0 || nx>=N || ny<0 || ny>=M) {
-//                    outCheck = true;
-//                    continue;
-//                }
-//
-//                sum += map[nx][ny];
-//            }
-//
-//            // 범위 안나갔으면
-//            if(!outCheck)
-//                result = Math.max(sum, result);
-//        }
-//    }
 }

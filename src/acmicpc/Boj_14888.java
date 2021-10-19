@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/*
+ 연산자 끼워넣기
+ - 순열
+ */
 public class Boj_14888 {
     static int N, max, min;
     static int[] nums, operators;
