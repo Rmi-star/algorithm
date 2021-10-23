@@ -9,23 +9,24 @@ import java.util.*;
 // A[r][c]: 추가되는 양분의 양
 // x y z: 나무의 위치, 나이
 
-class Tree implements Comparable<Tree> {
-    int x, y, age;
-
-    public Tree(int x, int y, int age) {
-        super();
-        this.x = x;
-        this.y = y;
-        this.age = age;
-    }
-
-    @Override
-    public int compareTo(Tree o) {
-        return this.age - o.age;
-    }
-}
-
 public class Boj_16235 {
+
+    static class Tree implements Comparable<Tree> {
+        int x, y, age;
+
+        public Tree(int x, int y, int age) {
+            super();
+            this.x = x;
+            this.y = y;
+            this.age = age;
+        }
+
+        @Override
+        public int compareTo(Tree o) {
+            return this.age - o.age;
+        }
+    }
+
     static int[] adj_x = {-1, -1, -1, 0, 0, 1, 1, 1};
     static int[] adj_y = {-1, 0, 1, -1, 1, -1, 0, 1};
 

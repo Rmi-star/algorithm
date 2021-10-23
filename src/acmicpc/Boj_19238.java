@@ -31,41 +31,42 @@ import java.util.*;
  참고 - https://suhyeokeee.tistory.com/107
  */
 
-class Node implements Comparable<Node> {
-    int x, y, dist;
+public class Boj_19238 {
 
-    public Node(int x, int y, int dist) {
-        this.x = x;
-        this.y = y;
-        this.dist = dist;
-    }
+    static class Node implements Comparable<Node> {
+        int x, y, dist;
 
-    @Override
-    public int compareTo(Node o) {
-        if (this.dist != o.dist) {
-            return this.dist - o.dist;
-        } else {
-            if (this.x != o.x) {
-                return this.x - o.x;
+        public Node(int x, int y, int dist) {
+            this.x = x;
+            this.y = y;
+            this.dist = dist;
+        }
+
+        @Override
+        public int compareTo(Node o) {
+            if (this.dist != o.dist) {
+                return this.dist - o.dist;
             } else {
-                return this.y - o.y;
+                if (this.x != o.x) {
+                    return this.x - o.x;
+                } else {
+                    return this.y - o.y;
+                }
             }
         }
     }
-}
 
-class Path {
-    int start_x, start_y, end_x, end_y;
+   static class Path {
+        int start_x, start_y, end_x, end_y;
 
-    public Path(int start_x, int start_y, int end_x, int end_y) {
-        this.start_x = start_x;
-        this.start_y = start_y;
-        this.end_x = end_x;
-        this.end_y = end_y;
+        public Path(int start_x, int start_y, int end_x, int end_y) {
+            this.start_x = start_x;
+            this.start_y = start_y;
+            this.end_x = end_x;
+            this.end_y = end_y;
+        }
     }
-}
 
-public class Boj_19238 {
     static int N, M, fuel;
     static int[][] map;
     static boolean[][] visited;

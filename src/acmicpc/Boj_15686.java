@@ -7,17 +7,18 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-class Point {
-    int x;
-    int y;
-
-    Point(int x, int y) {
-        this.x = x;
-        this.y = y;
-    }
-}
-
 public class Boj_15686 {
+
+    static class Point {
+        int x;
+        int y;
+
+        Point(int x, int y) {
+            this.x = x;
+            this.y = y;
+        }
+    }
+
     static int N, M;
     static int[][] map;
     static ArrayList<Point> person;
@@ -91,5 +92,4 @@ public class Boj_15686 {
             open[i] = false;
         }
     }
-
 }

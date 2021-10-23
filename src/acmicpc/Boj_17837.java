@@ -9,7 +9,6 @@ import java.util.StringTokenizer;
 
 /*
  새로운 게임2
-
  */
 public class Boj_17837 {
     public static void main(String[] args) throws IOException {

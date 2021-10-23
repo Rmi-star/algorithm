@@ -14,6 +14,23 @@ import java.util.StringTokenizer;
 
  */
 public class  Boj_17143 {
+    //상어 정보를 저장할 상어 클래스
+    static class Shark {
+        int r;
+        int c;
+        int s;
+        int d;
+        int z;
+
+        Shark(int r, int c, int s, int d, int z) {
+            this.r = r;
+            this.c = c;
+            this.s = s;
+            this.d = d;
+            this.z = z;
+        }
+    }
+
     public static int R, C, M;
     public static Shark[][] map;
     public static int answer = 0;
@@ -115,19 +132,3 @@ public class  Boj_17143 {
     }
 }
 
-//상어 정보를 저장할 상어 클래스
-class Shark {
-    int r;
-    int c;
-    int s;
-    int d;
-    int z;
-
-    Shark(int r, int c, int s, int d, int z) {
-        this.r = r;
-        this.c = c;
-        this.s = s;
-        this.d = d;
-        this.z = z;
-    }
-}
